@@ -10,7 +10,7 @@ function App() {
     return (<>
             <div className="w-full h-screen flex flex-col justify-center items-center gap-8 bg-[#F5F5F7]">
                 {activeScreen === 1 && <Screen1 onPress={handlePress}/>}
-                {activeScreen === 2 && <Screen2/>}
+                {activeScreen === 2 && <Screen2 name={"Josh"}/>}
             </div>
         </>)
 }
@@ -29,10 +29,10 @@ function Screen1({onPress}) {
     </>)
 }
 
-function Screen2() {
+function Screen2({name}) {
     return (<>
         <h1 className="text-4xl font-bold text-[#C42127]">
-            Logged in already
+            Logged in already {name}
         </h1>
     </>)
 }
